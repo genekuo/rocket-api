@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  rocket-api:
+    build: .
+    #command: bash -c "cargo run"
+    ports:
+      - "8000:8000"

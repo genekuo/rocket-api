@@ -1,0 +1,29 @@
+rustup override set nightly
+cargo install cargo-edit
+
+cargo add rocket
+
+cargo watch -x run
+
+cargo add rocket_contrib
+
+cargo add rocket_contrib --features helmet
+
+cargo add serde --features derive
+
+[Unit Test]
+cargo test
+
+[Test]
+docker-compose build
+docker-compose up -d
+
+curl localhost:8000/api/posts/1
+
+curl http://localhost:8000/api/posts
+curl -X POST http://localhost:8000/api/posts
+curl http://localhost:8000/api/posts/1
+curl -X PUT http://localhost:8000/api/posts/1
+curl -X DELETE http://localhost:8000/api/posts/1
+
+
